@@ -6,5 +6,5 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 cat <<EOF >> ~/.bashrc
 
 source ${SCRIPT_DIR}/.bashrc_private
-export $(cat ${SCRIPT_DIR}/.env | grep -v -e "^$" -e "^ *#" | sed -e "s| *#.*$||" | xargs)
+export \$(cat ${SCRIPT_DIR}/.env | grep -v -e "^$" -e "^ *#" | sed -e "s| *#.*$||" | xargs)
 EOF
