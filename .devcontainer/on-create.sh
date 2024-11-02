@@ -1,16 +1,10 @@
 #!/bin/bash
-
 set -ex
 
-echo "=== === === === === === ls -alF === === === === === ==="
-ls -alF
-echo "=== === === === === === pwd === === === === === ==="
-pwd
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
-PROJECT_ROOT=$(cd $(dirname $0)/..; pwd)
-cd $PROJECT_ROOT
+cat <<EOF >> ~/.bashrc
 
-cat <<EOF > ~/.bashrc
-
-source ${CONTAINER_PROJECT_ROOT}/.devcontainer/.bashrc_private
+source ${SCRIPT_DIR}/.bashrc_private
+export $(cat ${SCRIPT_DIR}/.env | grep -v -e "^$" -e "^ *#" | sed -e "s| *#.*$||" | xargs)
 EOF

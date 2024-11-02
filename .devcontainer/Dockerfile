@@ -1,10 +1,11 @@
-FROM mcr.microsoft.com/devcontainers/python:3.11-bullseye
+FROM mcr.microsoft.com/devcontainers/python:dev-3.12-bookworm
 
 RUN apt-get update && \
     apt-get install -y \
     bash-completion \
     iputils-ping \
     net-tools \
+    procps \
     make \
     gcc \
     jq \
@@ -15,8 +16,11 @@ RUN apt-get update && \
     wget \
     less \
     groff \
+    dnsutils \
     locales \
-    default-mysql-client 
+    sudo \
+    default-mysql-client \
+    sqlite3
 
 # ロケール設定
 RUN echo 'ja_JP.UTF-8 UTF-8' >> /etc/locale.gen && \
