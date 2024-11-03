@@ -27,3 +27,12 @@ JupyterのURLを設定
 任意の表示名を入力
 
 <img src="./docs/img/jupyter/05.png" width="700px">
+
+
+# Langserveの起動
+
+```bash
+python app/main.py
+```
+
+http://localhost:8000/chain/playground/ にアクセス
