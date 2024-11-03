@@ -36,3 +36,23 @@ python app/main.py
 ```
 
 http://localhost:8000/chain/playground/ にアクセス
+
+
+# LangSmithの利用
+
+https://smith.langchain.com/ にアクセスしてサインアップ
+
+
+手順に沿ってAPIキーを作成して、環境変数を設定
+
+
+<img src="./docs/img/langsmith/01.png" width="1000px">
+
+
+OpenAIのAPIにアクセスする
+
+```python
+from langchain_openai import ChatOpenAI
+llm = ChatOpenAI()
+llm.invoke("Hello, world!")
+```
