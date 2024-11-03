@@ -1,11 +1,22 @@
 jupyterlab
+
+# Build a Simple LLM Application with LCEL
 langchain~=0.3.7
 langchain-openai~=0.2.5
 pydantic~=2.9.2
 pydantic-settings~=2.6.1
 langserve[all]~=0.3.0
+
+# 02 Build a Chatbot
 langgraph~=0.2.44
+
+# 03 Build vector stores and retrievers
 langchain-chroma~=0.1.4
+
+# 04 Build an Agent
+langchain-community~=0.3.5
+tavily-python~=0.5.0
+langgraph-checkpoint-sqlite~=2.0.1
 
 #unstructured[md]~=0.12.4
 #tabulate~=0.9.0

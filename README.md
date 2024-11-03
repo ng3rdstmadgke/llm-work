@@ -56,3 +56,7 @@ from langchain_openai import ChatOpenAI
 llm = ChatOpenAI()
 llm.invoke("Hello, world!")
 ```
+
+# Tavilyの利用
+
+https://tavily.com/
