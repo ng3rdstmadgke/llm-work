@@ -20,7 +20,8 @@ RUN apt-get update && \
     locales \
     sudo \
     default-mysql-client \
-    sqlite3
+    sqlite3 \
+    tmux
 
 # ロケール設定
 RUN echo 'ja_JP.UTF-8 UTF-8' >> /etc/locale.gen && \
